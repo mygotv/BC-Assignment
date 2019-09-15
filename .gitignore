@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+*.suo
+/.vs/slnx.sqlite
+/Weather/.vs/Weather/v15/Server/sqlite3
+*.nupkg
+/Weather/packages/jQuery.3.4.1/.signature.p7s
+/Weather/packages
+/Weather/Weather/bin
+/Weather/Weather/obj/Debug
