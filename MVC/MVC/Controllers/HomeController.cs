@@ -9,7 +9,7 @@ namespace MVC.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-        public ActionResult Test()
+        public ActionResult GetCourses()
         {
             return View();
         }
