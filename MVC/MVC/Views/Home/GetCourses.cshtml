@@ -4,6 +4,17 @@
 }
 @using MVC.Models;
 
+<style type="text/css">
+   
+    tr:nth-child(even) {
+        background: #CCC
+    }
+    tr:nth-child(odd) {
+        background: #FFF
+    }
+    th {font-size:large}   
+</style>
+
 <body>
     <table cellpadding="4">
         <tr>
@@ -11,25 +22,26 @@
             <td valign="bottom">The English Department supports the College's mission of providing "a strong academic foundation for students of diverse backgrounds, preparations, and aspirations." Our course offerings in Composition, Literature, and English as a Second Language share the common goal of developing students' facility with language, as well as their critical and analytical skills.</td>
         </tr>
     </table>
-      
+
     <h3>Available Courses (@Model.Count)</h3>
-    <p>English department currently offers the following courses to our students: </p>
 
     @if (Model.Count == 0)
     {
-        <p>No availble course found at this time. Please come back later or contact the department personel for more information.</p>
+    <p>No available course found at this time. Please come back later or contact the department personel for more information.</p>
     }
+    else
+    {
+        <p>English department currently offers the following courses to our students: </p>
+        <table border="1" cellpadding="4">
+            <caption></caption>
+            <tr><th width="200">Title</th><th width="15">Credits</th><th width="600">Description</th></tr>
 
-    <table border="1" cellpadding="4">
-        <caption></caption>
-        <tr><th width="200">Title</th><th width="15">Credits</th><th width="600">Description</th></tr>
-
-        @foreach (var m in Model)
-        {
-            <tr><td>@m.title</td><td align="center">@m.credits</td><td>@m.description</td></tr>
-        }
-    </table>
-
+            @foreach (var m in Model)
+            {
+                <tr><td>@m.title</td><td align="center">@m.credits</td><td>@m.description</td></tr>
+            }
+        </table>
+    }
 </body>
 
 

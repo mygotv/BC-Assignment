@@ -22,6 +22,11 @@ namespace MVC.Controllers
 
             CoursesDto courses = (CoursesDto)temp;
 
+            //build custom sort
+            courses.Courses.Sort((course1, course2) => course1.title.CompareTo(course2.title));
+
+            //courses.Courses.Clear();    //clear Courses for testing purpose only
+
             return View(courses.Courses as IEnumerable<Courses>);
         }
     }
