@@ -1,5 +1,5 @@
-# BCCAssignment
-BCC Assignment
+# BC Assignment
+BC Assignment
 
 Create a small C# ASP.NET or .NET Core webpage/web application using the MVC or MVVM framework that fulfills the requirements below
 
